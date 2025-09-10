@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		679C0D8D2E70672B00923FF8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 6788AAE12E7059EE00D82918 /* Core */; };
+		679C0D9D2E70675C00923FF8 /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 679C0D9C2E70675C00923FF8 /* Components */; };
+		67CE61C02E70512C0081D794 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 67CE61BF2E70512C0081D794 /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		67CE61AA2E704CD50081D794 /* tca-boilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tca-boilerplate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,16 +29,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679C0D8D2E70672B00923FF8 /* Core in Frameworks */,
+				67CE61C02E70512C0081D794 /* ComposableArchitecture in Frameworks */,
+				679C0D9D2E70675C00923FF8 /* Components in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		671E2B3C2E706049006C2CAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67CE61A12E704CD50081D794 = {
 			isa = PBXGroup;
 			children = (
 				67CE61AC2E704CD50081D794 /* tca-boilerplate */,
+				671E2B3C2E706049006C2CAE /* Frameworks */,
 				67CE61AB2E704CD50081D794 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +82,9 @@
 			);
 			name = "tca-boilerplate";
 			packageProductDependencies = (
+				67CE61BF2E70512C0081D794 /* ComposableArchitecture */,
+				6788AAE12E7059EE00D82918 /* Core */,
+				679C0D9C2E70675C00923FF8 /* Components */,
 			);
 			productName = "tca-boilerplate";
 			productReference = 67CE61AA2E704CD50081D794 /* tca-boilerplate.app */;
@@ -94,6 +114,10 @@
 			);
 			mainGroup = 67CE61A12E704CD50081D794;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				67CE61BE2E70512C0081D794 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				679C0D9B2E70675C00923FF8 /* XCLocalSwiftPackageReference "tca-boilerplate/Modules/Components" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 67CE61AB2E704CD50081D794 /* Products */;
 			projectDirPath = "";
@@ -178,7 +202,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -236,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -326,6 +350,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		679C0D9B2E70675C00923FF8 /* XCLocalSwiftPackageReference "tca-boilerplate/Modules/Components" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "tca-boilerplate/Modules/Components";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67CE61BE2E70512C0081D794 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.22.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6788AAE12E7059EE00D82918 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+		679C0D9C2E70675C00923FF8 /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Components;
+		};
+		67CE61BF2E70512C0081D794 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67CE61BE2E70512C0081D794 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67CE61A22E704CD50081D794 /* Project object */;
 }
